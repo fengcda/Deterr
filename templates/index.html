@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>Deterr Laptop Security</title>
+  </head>
+  <body>
+    <h1>Deterr Laptop Security Demonstration</h1>
+    <img src="{{ url_for('calc') }}">
+    <img src="{{ url_for('calc2') }}">
+    <br>
+    <body>Battery is at {{percent}}%</body>
+    {% if not charging %}
+      <p>Your laptop is unplugged!</p>
+    {% else %}
+      <p>You laptop is actively charging</p>
+    {% endif %}
+    <form action="/alarm" method="GET">
+      <input type="submit" value="Sound Alarm!">
+    </form>
+  	<!-- <h1>{{ url_for('calc') }}</h1> -->
+  </body>
+</html>
